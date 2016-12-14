@@ -1,15 +1,16 @@
-# Iran's Calendar Events
+# Iran's Calendar Events to ical
 
-This python3 script scrapes [time.ir](http://time.ir) for a **day** or a **month** events.
+This python script scrapes [time.ir](http://time.ir) for a **day** or a **month** events.
 
 ## Dependencies
 * `beautifulsoup4`
 * `requests`
+* `pycalverter`
 
-To install dependencies, use `pip3`:
+To install dependencies, use `pip`:
 
 ```bash
-$ pip3 install -r requirements.txt --upgrade
+$ pip install -r requirements.txt --upgrade
 ```
 
 ## Installation
