@@ -8,13 +8,13 @@ persiancal = Calverter()
 cal = Calendar()
 cal['summary'] = u'تقویم اتفاقات تقویم شمسی'
 
-for year in [1395]:
-	for month in xrange(1, 13):
-		for day in xrange(1, 32):
+for year in [1397]:
+	for month in range(1, 13):
+		for day in range(1, 32):
 			events = ircalevents.get_day_events(year, month, day)
 			jd = persiancal.jalali_to_jd(year, month, day)
 			gro = persiancal.jd_to_gregorian(jd)
-			print gro
+			print (gro)
 			for item in events:
 				event = Event()
 				event.add('summary', item)
@@ -26,6 +26,6 @@ for year in [1395]:
 #cal['dtstart'] = '20050404T080000'
 
 result = cal.to_ical()
-file_ = open('irantaghvim.ical', 'w')
+file_ = open('irantaghvim.ical', 'wb')
 file_.write(result)
 file_.close()
